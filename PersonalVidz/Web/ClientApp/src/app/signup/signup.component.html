@@ -1,0 +1,53 @@
+<mat-stepper orientation="vertical" [linear]="true">
+  <mat-step [stepControl]="generalFormGroup">
+    <form [formGroup]="generalFormGroup">
+      <ng-template matStepLabel>General Information</ng-template>
+      <div class="row">
+        <div class="col-6">
+          <mat-form-field appearance="fill" class="w-100">
+            <mat-label>First Name</mat-label>
+            <input matInput placeholder="Enter First Name"
+                  formControlName="firstName" required>
+          </mat-form-field>
+        </div>
+        <div class="col-6">
+          <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Last Name</mat-label>
+            <input matInput placeholder="Enter Last Name"
+                  formControlName="lastName">
+          </mat-form-field>
+        </div>
+        <div class="col-6">
+          <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Enter UserName"
+                  formControlName="userName">
+          </mat-form-field>
+        </div>
+        <div class="col-6">
+          <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput placeholder="Enter Email Address"
+                  formControlName="email">
+          </mat-form-field>
+        </div>
+        <div class="col-6">
+          <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput placeholder="Enter Password"
+                  formControlName="password">
+          </mat-form-field>
+        </div>
+        <div class="col-6">
+          <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Confirm Password</mat-label>
+            <input type="password" matInput placeholder="Enter the Password again." formControlName="confirmPassword">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="w-100 d-inline-flex justify-content-end">
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+</mat-stepper>

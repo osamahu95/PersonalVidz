@@ -1,0 +1,22 @@
+<mat-drawer-container class="sidebarContainer">
+  <mat-drawer mode="side" opened>
+    <h2 class="navbar-brand-heading">
+      <a class="navbar-brand" [routerLink]="['/']">PersonalVidz</a>
+      <mat-selection-list multiple="false">
+        <a [routerLink]="['/']">
+          <mat-list-option>Home</mat-list-option>
+        </a>
+        <a [routerLink]="['/contactus']">
+          <mat-list-option>Contact Us</mat-list-option>
+        </a>
+        <a [routerLink]="['/about']">
+          <mat-list-option>About Us</mat-list-option>
+        </a>
+      </mat-selection-list>
+    </h2>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-nav-menu></app-nav-menu>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
